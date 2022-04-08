@@ -18,12 +18,15 @@
       <label class="data1" for="salary">Basic Salary</label>
       <input class="data2" type="number" id="salary" /><br /><br />
 
-      <button class="add_B" onclick="Myfunction()" type="submit" id="Button">
-        ADD</button
-      ><br />
+      <div id="error" style="color: red;"></div>
+
+      <button class="add_B" onclick="Myfunction()" type="submit" id="Button"> ADD</button>
+
+      
       <div id="demo"></div>
       <div class="validation"></div>
       <p id="Catcherror"></p>
+      
     </div>
     <script>
 
@@ -37,7 +40,7 @@ var EMPLOYEE = [];
         var Emp_Salary = document.getElementById("salary").value;
         console.log("This is my function" + Myfunction);
         if (Emp_Id == "" || Emp_Name == "" || Emp_Salary == "") {
-          alert("Please fill all the feilds.");
+          document.getElementById("error").innerHTML = "All fields must be filled.";
         }
 
         var Details = {
