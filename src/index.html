@@ -38,8 +38,8 @@
        
         var Emp_Name = document.getElementById("name").value;
         var Emp_Salary = document.getElementById("salary").value;
-        "use strict";
-        Emp_Salary = 30000;
+        // "use strict";
+        // Emp_Salary = 30000;
        
         if (Emp_Id == "" || Emp_Name == "" || Emp_Salary == "") {
           document.getElementById("error").innerHTML =
@@ -87,7 +87,8 @@
         <td>${updatedSal}</td>
         <tr/>`;
             } else {
-              console.log("Your Salary Less than 0");
+              // console.log("Your Salary Less than 0");
+              alert("Your salary is less than or equal to zero");
             }
           });
           document.getElementById("demo").innerHTML = html_header + html_footer;
